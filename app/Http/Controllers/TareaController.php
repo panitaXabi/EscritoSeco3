@@ -14,9 +14,9 @@ public function crearTareaConCategoriasYRevision()
 
     try {
         $tarea = new Tarea([
-            'titulo' => 'Tarea de ejemplo',
-            'contenido' => 'Contenido de la tarea',
-            'estado' => 'Pendiente',
+            'titulo' => 'gonzalo escrito',
+            'contenido' => 'gonzalo no me pongas 1',
+            'estado' => 'secoooo',
             'usuario_id' => 1, 
         ]);
         $tarea->save();
@@ -25,7 +25,7 @@ public function crearTareaConCategoriasYRevision()
         $tarea->categorias()->attach([1, 2]);
 
         $revision = new Revision([
-            'detalle' => 'Revisión de la tarea',
+            'detalle' => 'gonzalo asdasd',
             'tarea_id' => $tarea->id,
         ]);
         $revision->save();
